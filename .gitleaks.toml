@@ -1,0 +1,14 @@
+title = "gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Ignorar el archivo de pruebas"
+paths = ['''test_secrets\.py''']
+
+[[rules]]
+id = "corp-id"
+description = "ID corporativo"
+regex = '''CORP_ID_[0-9]{5}'''
+keywords = ["corp_id"]
